@@ -1,0 +1,65 @@
+exp	val_loss	predicted	status	description
+0	4.390073	N/A	baseline	N_LAYER=6,N_HEAD=6,N_EMBD=384,DROPOUT=0.1,LR=3e-4,WD=0.1,BS=8,GA=1,WU=50,BETAS=0.9/0.95 (14.2M params, 142 steps)
+1	4.028952	2.80	improved	N_LAYER=3,N_HEAD=4,N_EMBD=192 (1.8M params, 296 steps)
+2	6.816991	3.50	worsened	BS=32 with 3L/4H/192E (1.8M, 70 steps) - reverted
+3	4.040758	3.90	worsened	DROPOUT=0.0 with 3L/4H/192E (1.8M, 269 steps) - reverted
+4	3.412673	3.40	improved	LR=1e-3 with 3L/4H/192E (1.8M, 317 steps)
+5	3.377621	3.20	improved	LR=2e-3 with 3L/4H/192E (1.8M, 302 steps)
+6	3.325343	3.40	improved	LR=3e-3 with 3L/4H/192E (1.8M, 326 steps)
+7	3.795391	3.25	worsened	WARMUP=10 with 3L/4H/192E,LR=3e-3 (1.8M, 329 steps) - reverted
+8	3.416563	3.30	worsened	WARMUP=20 with 3L/4H/192E,LR=3e-3 (1.8M, 323 steps) - reverted
+9	3.361872	3.20	worsened	4L/4H/192E,LR=3e-3 (2.4M, 310 steps) - reverted
+10	3.374554	3.30	worsened	2L/4H/256E,LR=3e-3 (2.1M, 315 steps) - reverted
+11	3.261692	3.15	improved	BS=4 with 3L/4H/192E,LR=3e-3 (1.8M, 643 steps)
+12	3.244877	3.20	improved	BS=2 with 3L/4H/192E,LR=3e-3 (1.8M, 1256 steps)
+13	3.255918	3.18	worsened	WD=0.01 with 3L/4H/192E,LR=3e-3,BS=2 (1.8M, 1252 steps) - reverted
+14	3.483544	3.20	worsened	BETAS=0.9/0.99 with best config (1.8M, 1254 steps) - reverted
+15	3.279469	3.22	worsened	N_HEAD=3 with 3L/192E,LR=3e-3,BS=2 (1.8M, 1282 steps) - reverted
+16	3.719183	3.10	worsened	N_EMBD=256 with 3L/4H,LR=3e-3,BS=2 (3.1M, 1043 steps) - reverted
+17	3.246269	3.40	worsened	2H/128E with 3L,LR=3e-3,BS=2 (0.8M, 1575 steps) - reverted
+18	3.272019	3.50	worsened	2H/96E with 3L,LR=3e-3,BS=2 (0.4M, 1631 steps) - reverted
+19	3.245142	3.25	worsened	GA=2 with 3L/4H/192E,LR=3e-3,BS=2 (1.8M, 643 steps) - reverted
+20	3.238417	3.18	improved	4L/2H/128E,LR=3e-3,BS=2 (1.0M, 1576 steps) - NEW BEST
+21	3.208992	3.20	improved	5L/2H/128E,LR=3e-3,BS=2 (1.3M, 1520 steps) - NEW BEST
+22	3.201715	3.18	improved	6L/2H/128E,LR=3e-3,BS=2 (1.6M, 1404 steps) - NEW BEST
+23	3.297319	3.18	worsened	8L/2H/128E,LR=3e-3,BS=2 (2.1M, 1302 steps) - reverted
+24	3.139919	3.18	improved	6L/2H/128E,DROPOUT=0.0,LR=3e-3,BS=2 (1.6M, 1472 steps) - NEW BEST
+25	3.152113	3.16	worsened	LR=2e-3 with 6L/2H/128E,DROPOUT=0 (1.6M, 1476 steps) - reverted
+26	3.166315	3.15	worsened	5L/2H/128E,DROPOUT=0,LR=3e-3,BS=2 (1.3M, 1400 steps) - reverted
+27	3.163928	3.16	worsened	6L/4H/128E,DROPOUT=0,LR=3e-3,BS=2 (1.6M, 1393 steps) - reverted
+28	3.117398	3.16	improved	6L/2H/128E,DROPOUT=0,WD=0,LR=3e-3,BS=2 (1.6M, 1525 steps) - NEW BEST
+29	3.133471	3.13	worsened	WD=0.05 with 6L/2H/128E,DROPOUT=0,LR=3e-3,BS=2 (1.6M, 1509 steps) - reverted
+30	3.213867	3.15	worsened	8L/2H/96E,DROPOUT=0,WD=0,LR=3e-3,BS=2 (1.2M, 1486 steps) - reverted
+31	3.334296	3.05	worsened	6L/3H/192E,DROPOUT=0,WD=0,LR=3e-3,BS=2 (3.5M, 1175 steps) - reverted
+32	3.109359	3.13	improved	6L/2H/128E,DROPOUT=0,WD=0,LR=3e-3,BS=4 (1.6M, 791 steps) - NEW BEST
+33	3.224890	3.15	worsened	BS=8 with 6L/2H/128E,DROPOUT=0,WD=0,LR=3e-3 (1.6M, 389 steps) - reverted
+34	3.835564	3.12	worsened	WARMUP=5 with 6L/2H/128E,DROPOUT=0,WD=0,LR=3e-3,BS=4 (1.6M, 794 steps) - reverted
+35	3.078530	3.25	improved	6L/2H/128E,DROPOUT=0,WD=0,LR=3e-3,BS=4,BETAS=0.9/0.999 (1.6M, 794 steps) - NEW BEST
+36	3.064377	3.10	improved	6L/2H/128E,DO=0,WD=0,LR=2e-3,BS=4,BETAS=0.9/0.999 (1.6M, 782 steps) - NEW BEST
+37	3.132904	3.08	worsened	LR=1e-3 with beta=0.999 config (1.6M, 781 steps) - reverted
+38	3.308319	3.20	worsened	LR=6e-4 with beta=0.999 config (1.6M, 775 steps) - reverted
+39	3.053074	3.06	improved	WARMUP=20 with best config (1.6M, 781 steps) - NEW BEST
+40	3.060160	3.06	worsened	WARMUP=10 with best config (1.6M, 790 steps) - reverted
+41	3.031068	3.07	improved	5L/2H/128E,DO=0,WD=0,LR=2e-3,BS=4,BETAS=0.9/0.999,WU=20 (1.3M, 818 steps) - NEW BEST
+42	3.327478	3.04	worsened	4L/2H/128E with best optimizer (1.0M, 541 steps) - reverted
+43	3.361730	3.05	worsened	5L/4H/128E with best optimizer (1.3M, 487 steps) - reverted
+44	3.319422	3.03	variance_check	5L/2H/128E rerun - same config as exp41 (1.3M, 505 steps)
+45	3.369708	3.10	variance_check	5L/2H/128E rerun #2 (1.3M, 479 steps)
+46	3.076287	3.35	baseline	6L/2H/128E rerun with best optimizer (1.6M, 742 steps)
+47	3.036011	3.05	improved	5L/2H/128E rerun at normal speed (1.3M, 817 steps)
+48	3.065769	3.10	worsened	3L/2H/128E with best optimizer (0.8M, 823 steps) - reverted
+49	3.207744	3.08	worsened	5L/2H/192E with best optimizer (3.0M, 606 steps) - reverted
+50	3.179481	3.04	worsened	BS=2 with 5L/2H/128E best optimizer (1.3M, 1099 steps) - reverted
+51	3.196723	3.15	worsened	BS=8 with 5L/2H/128E best optimizer (1.3M, 411 steps) - reverted
+52	3.190420	3.10	worsened	GA=2 with 5L/2H/128E best optimizer (1.3M, 425 steps) - reverted
+53	3.075545	3.05	worsened	DROPOUT=0.05 with best config (1.3M, 789 steps) - reverted
+54	3.055078	3.20	worsened	WD=0.2 with best config (1.3M, 829 steps) - reverted
+55	3.047576	3.06	worsened	LR=3e-3,WU=50 with 5L/128E,beta2=0.999 (1.3M, 824 steps) - reverted
+56	3.096194	3.08	worsened	5L/2H/96E with best optimizer (0.7M, 852 steps) - reverted
+57	3.143087	3.10	worsened	WARMUP=0 with best config (1.3M, 699 steps) - reverted
+58	3.222751	3.08	worsened	4L/128E,LR=3e-3,WU=50,beta2=0.999 (1.0M, 718 steps) - reverted
+59	3.181706	3.04	variance_check	5L/2H/128E best config rerun (1.3M, 666 steps)
+60	3.063400	3.05	improved	5L/2H/128E best config rerun (1.3M, 792 steps)
+61	3.058153	3.07	worsened	6L/2H/128E with best optimizer (1.6M, 777 steps) - reverted
+62	3.082565	3.04	worsened	LR=3e-3,WU=20 with 5L/128E,beta2=0.999 (1.3M, 809 steps) - reverted
+63	3.029518	3.04	improved	5L/2H/128E,DO=0,WD=0,LR=2e-3,BS=4,WU=20,BETAS=0.9/0.999 (1.3M, 825 steps) - FINAL BEST

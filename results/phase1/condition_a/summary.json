@@ -1,0 +1,9 @@
+{
+  "condition": "A",
+  "num_experiments": 63,
+  "best_val_loss": 3.23023,
+  "total_experiments_run": 64,
+  "keeps": 9,
+  "discards": 55,
+  "crashes": 0
+}

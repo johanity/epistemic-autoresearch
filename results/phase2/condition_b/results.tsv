@@ -1,0 +1,21 @@
+exp	val_loss	steps	status	description
+0	2.784552	4292	baseline	Phase1 best: 2L/4H/192E, LR=1e-3, BS=2, WD=0, DO=0, betas=(0.9,0.999), warmup=0
+1	2.976504	3289	discard	4L/4H/256E — larger model, fewer steps, worse
+2	2.794267	4009	discard	3L/4H/192E — one more layer, slightly worse
+3	2.891613	3642	discard	2L/4H/256E — wider, fewer steps, worse
+4	2.810709	4209	discard	LR=6e-4 — lower LR worse
+5	3.259706	4284	discard	LR=2e-3 — much too high
+6	2.821256	4165	discard	warmup=10 — worse
+7	2.647291	2268	best	BS=4 — less noisy gradients, NEW BEST
+8	2.567815	1199	best	BS=8 — even better, NEW BEST
+9	2.689824	585	discard	BS=16 — too few steps
+10	2.579561	1072	discard	3L/4H/192E BS=8 — slightly worse
+11	2.572858	1040	discard	2L/4H/256E BS=8 — slightly worse
+12	3.020540	1527	discard	LR=3e-3 BS=8 — too high
+13	2.767837	1855	discard	LR=2e-3 BS=8 — too high
+14	2.594722	1803	discard	LR=6e-4 BS=8 — slightly worse
+15	2.536263	1787	best	betas=(0.9,0.95) BS=8 — NEW BEST
+16	2.458677	1919	best	betas=(0.9,0.99) BS=8 — NEW BEST
+17	2.445434	1837	best	warmup=20 — NEW BEST
+18	2.459492	1782	discard	warmup=50 — slightly worse
+19	2.441034	1858	best	WD=0.01 — NEW BEST

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Search Is Not Learning: Prediction Error as the Source of Transfer in Autonomous Research"
+authors:
+  - family-names: "Bonilla"
+    given-names: "Johan David"
+    alias: "johanity"
+type: software
+date-released: 2026-03-10
+url: "https://github.com/johanity/epistemic-autoresearch"
+repository-code: "https://github.com/johanity/epistemic-autoresearch"
+license: MIT
+keywords:
+  - prediction-error
+  - autoresearch
+  - autonomous agents
+  - transfer learning
+  - meta-learning
+  - scientific method
+  - first principles
+  - ai safety
+abstract: >-
+  What if the AI agent guessed first? 251 experiments across three agent
+  conditions — blind search, LLM reflection, and LLM prediction-error —
+  show that the predicting agent adapted to a 5x compute shift on its
+  first try. The reflecting agent took 7 tries. The searching agent never
+  caught up. Prediction error is the source of transfer in autonomous research.
+references:
+  - type: software
+    title: "Theorist"
+    authors:
+      - family-names: "Bonilla"
+        given-names: "Johan David"
+    url: "https://github.com/johanity/theorist"

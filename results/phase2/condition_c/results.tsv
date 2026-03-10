@@ -1,0 +1,21 @@
+exp	val_loss	predicted	status	description
+0	2.669242	2.55	baseline	Phase1 best: 5L/2H/128E, LR=2e-3, BS=4, WD=0, DO=0, betas=(0.9,0.999), warmup=20 (1.3M, 2580 steps)
+1	2.455858	2.52	improved	BS=8 — fixed cosine schedule, 1766 steps, NEW BEST
+2	2.901234	2.40	worsened	6L/4H/256E — too large, 1205 steps, reverted
+3	2.458175	2.44	worsened	6L/2H/128E — barely worse, 1898 steps, 1.6M params, reverted
+4	2.429258	2.42	improved	beta2=0.99 — faster moment adaptation, 1959 steps, NEW BEST
+5	2.427666	2.41	improved	WD=0.01 — tiny improvement, 1948 steps, NEW BEST
+6	2.721557	2.45	worsened	beta2=0.95 — too aggressive, reverted to 0.99
+7	2.559193	2.42	worsened	LR=1e-3 — too low, 1972 steps, reverted
+8	2.675338	2.50	worsened	LR=3e-3 — too high, only 1000 steps (MPS throttled), reverted
+9	2.486213	2.43	worsened	warmup=10 — too little warmup, 1756 steps, reverted
+10	2.427042	2.44	improved	warmup=50 — marginal improvement, 1983 steps, NEW BEST (barely)
+11	2.429832	2.50	worsened	GA=2 (eff BS=16) — 991 steps, slightly worse, reverted
+12	2.473626	2.44	worsened	DO=0.05 — dropout still harmful at 600s, 1894 steps, reverted
+13	2.379145	2.48	improved	5L/4H/192E — wider model works at 600s! 1525 steps, 3.0M params, NEW BEST
+14	2.381481	2.37	worsened	6L/4H/192E — 6th layer doesn't help, 1401 steps, 3.5M, reverted to 5L
+15	2.803223	2.40	worsened	5L/4H/256E — too large at 5.2M, 1282 steps, reverted to 192E
+16	2.850086	2.39	worsened	4L/4H/192E — much worse, only 633 steps (MPS throttled), reverted to 5L
+17	2.441453	2.39	worsened	5L/2H/192E (head_dim=96) — 4 heads better than 2 at 192E, 1296 steps, reverted
+18	2.629415	2.39	worsened	5L/6H/192E (head_dim=32) — much worse, only 834 steps (MPS throttled), reverted
+19	2.750785	2.38	worsened	5L/4H/192E warmup=20 — worse, only 738 steps (MPS throttled), reverted to warmup=50
